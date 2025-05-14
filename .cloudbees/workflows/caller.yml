@@ -5,4 +5,4 @@ on:
   workflow_dispatch:
 jobs:
   call_rw_1:
-    uses: cb-nsrinivasa/reusable-workflow/.cloudbees/workflows/reusable.yaml@v1
+    uses: cb-nsrinivasa/reusable-workflow/.cloudbees/workflows/reusable.yaml
