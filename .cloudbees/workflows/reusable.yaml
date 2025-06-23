@@ -7,14 +7,18 @@ on:
     inputs:
       targetenv:
         type: string
-
+      defaultTargetenv:
+        type: string
+        default: 'default env'
 jobs:
   JobName1:
     steps:
       - name: print input
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
-        run: echo "inputs.targetenv = ${{inputs.targetenv}}"
+        run: |
+          echo "inputs.targetenv = ${{inputs.targetenv}}"
+          echo "inputs.defaultTargetenv = ${{inputs.defaultTargetenv}}"
           
       - name: Say hello
         uses: docker://golang:1.20.3-alpine3.17
