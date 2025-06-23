@@ -3,7 +3,10 @@ kind: workflow
 name: reusable wf 1
 
 on:
-  workflow_call: {}
+  workflow_call:
+    inputs:
+      targetenv:
+        type: string
 
 jobs:
   JobName1:
