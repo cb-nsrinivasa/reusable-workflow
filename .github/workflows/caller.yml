@@ -6,7 +6,7 @@ on:
 
 jobs:
   call-reusable:
-    uses: cb-nsrinivasa/reusable-workflow/.github/workflows/reusable.yml@main
+    uses: cb-nsrinivasa/reusable-workflow/.github/workflows/reusable.yaml@main
     with:
       node_version: '20'
     secrets:
