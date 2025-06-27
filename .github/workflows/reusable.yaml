@@ -26,7 +26,6 @@ jobs:
 
       - name: Print secret
         run: |
-          echo "Secret is ${{ secrets.MY_SECRET }}"
-          echo "input_string is ${{ input.input_string }}"
-          echo "input_number is ${{ input.input_number }}"
-          echo "input_boolean is ${{ input.input_boolean }}"
+          echo "input_string is ${{ inputs.input_string }}"
+          echo "input_number is ${{ inputs.input_number }}"
+          echo "input_boolean is ${{ inputs.input_boolean }}"
