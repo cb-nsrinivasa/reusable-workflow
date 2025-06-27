@@ -6,6 +6,13 @@ on:
       node_version:
         required: true
         type: string
+      input_string:
+        type: string
+      input_number:
+        type: number
+      input_boolean:
+        type: boolean        
+        
     secrets:
       MY_SECRET:
         required: true
@@ -17,10 +24,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ inputs.node_version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ inputs.node_version }}
-
       - name: Print secret
-        run: echo "Secret is ${{ secrets.MY_SECRET }}"
+        run: |
+          echo "Secret is ${{ secrets.MY_SECRET }}"
+          echo "input_string is ${{ input.input_string }}"
+          echo "input_number is ${{ input.input_number }}"
+          echo "input_boolean is ${{ input.input_boolean }}"
