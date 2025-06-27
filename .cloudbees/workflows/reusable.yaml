@@ -7,6 +7,10 @@ on:
     inputs:
       targetenv:
         type: string
+      numTargetEnv:
+        type: number
+      boolTargetEnv:
+        type: boolean        
       defaultTargetenv:
         type: string
         default: 'default env'
