@@ -5,14 +5,14 @@ name: workflow-dispatch
 on:
   workflow_dispatch:
     inputs:
-      choiceInput:
-        type: choice
-        options:
-          - info
-          - warning
-          - debug
-      stringInput:
-        type: string
+      # choiceInput:
+      #   type: choice
+      #   options:
+      #     - info
+      #     - warning
+      #     - debug
+      # stringInput:
+      #   type: string
       numInput:
         type: number
       boolInput:
@@ -26,8 +26,8 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "inputs.choiceInput = ${{inputs.choiceInput}}"
-          echo "inputs.stringInput = ${{inputs.stringInput}}"
+          # echo "inputs.choiceInput = ${{inputs.choiceInput}}"
+          # echo "inputs.stringInput = ${{inputs.stringInput}}"
           echo "inputs.numInput = ${{inputs.numInput}}"
           echo "inputs.boolInput = ${{inputs.boolInput}}"
 
