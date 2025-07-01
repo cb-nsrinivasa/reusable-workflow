@@ -21,8 +21,13 @@ on:
 
 
 jobs:
-  print-tag:
-    runs-on: ubuntu-latest
+  JobName1:
     steps:
-      - name: Print the input tag to STDOUT
-        run: echo  The tags are ${{ inputs.tags }} ${{ inputs.logLevel }}
+      - name: print input
+        uses: docker://golang:1.20.3-alpine3.17
+        shell: sh
+        run: |
+          echo echo  The tags are ${{ inputs.tags }} ${{ inputs.logLevel }}
+
+
+
