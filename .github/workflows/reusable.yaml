@@ -11,7 +11,15 @@ on:
       input_number:
         type: number
       input_boolean:
-        type: boolean        
+        type: boolean
+      choice_boolean:
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+
+        
         
     secrets:
       MY_SECRET:
