@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print the input tag to STDOUT
+        run: |
           echo "inputs.choiceInput = ${{inputs.choiceInput}}"
           echo "inputs.stringInput = ${{inputs.stringInput}}"
           echo "inputs.numInput = ${{inputs.numInput}}"
