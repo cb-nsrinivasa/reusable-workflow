@@ -5,19 +5,18 @@ name: workflow-dispatch
 on:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
+      choiceInput:
         type: choice
         options:
           - info
           - warning
           - debug
-      print_tags:
-        description: 'True to print to STDOUT'
-        type: boolean
-      tags:
-        description: 'Test scenario tags'
+      stringInput:
         type: string
+      numInput:
+        type: number
+      boolInput:
+        type: boolean  
 
 
 jobs:
@@ -27,7 +26,9 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo echo  The tags are ${{ inputs.tags }} ${{ inputs.logLevel }}
-
+          echo "inputs.choiceInput = ${{inputs.choiceInput}}"
+          echo "inputs.stringInput = ${{inputs.stringInput}}"
+          echo "inputs.numInput = ${{inputs.numInput}}"
+          echo "inputs.boolInput = ${{inputs.boolInput}}"
 
 
