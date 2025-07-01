@@ -21,6 +21,7 @@ jobs:
         run: |
           echo "inputs.boolInput = ${{inputs.boolInput}}"
           echo "inputs.numInput = ${{inputs.numInput}}"
+          cat /cloudbees/scopes-stack-head/scope-0.json
 
           
 
