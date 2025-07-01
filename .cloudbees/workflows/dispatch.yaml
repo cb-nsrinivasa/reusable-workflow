@@ -4,7 +4,10 @@ name: workflow-dispatch
 
 on:
   workflow_dispatch:
-
+    inputs:
+      boolInput:
+        type: boolean
+        
 
 jobs:
   JobName1:
@@ -13,6 +16,7 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "inputs.boolInput ="
+          echo "inputs.boolInput = ${{inputs.boolInput}}"
+
           
 
