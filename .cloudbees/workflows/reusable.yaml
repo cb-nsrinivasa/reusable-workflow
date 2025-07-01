@@ -10,7 +10,14 @@ on:
       numTargetEnv:
         type: number
       boolTargetEnv:
-        type: boolean    
+        type: boolean
+      choice_boolean:
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+        
         
       defaultTargetenv:
         type: string
