@@ -33,6 +33,7 @@ jobs:
           echo "inputs.defaultTargetenv = ${{inputs.defaultTargetenv}}"
           echo "inputs.numTargetEnv = ${{inputs.numTargetEnv}}"
           echo "inputs.boolTargetEnv = ${{inputs.boolTargetEnv}}"
+          echo "inputs.choice_boolean = ${{inputs.choice_boolean}}"
           
       - name: Say hello
         uses: docker://golang:1.20.3-alpine3.17
