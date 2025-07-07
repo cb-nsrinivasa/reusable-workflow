@@ -17,6 +17,9 @@ on:
           - info
           - warning
           - debug
+      withoutType:
+        default: 10
+          
         
         
       defaultTargetenv:
