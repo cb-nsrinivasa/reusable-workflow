@@ -18,6 +18,7 @@ on:
           - warning
           - debug
       withoutType:
+        type: number
         default: 10
           
         
