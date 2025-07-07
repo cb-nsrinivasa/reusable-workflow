@@ -17,6 +17,9 @@ on:
         type: number
       boolInput:
         type: boolean 
+      withDefault:
+        type: number
+        default: 10
         
         
 
@@ -31,6 +34,7 @@ jobs:
           echo "inputs.stringInput = ${{inputs.stringInput}}"
           echo "inputs.numInput = ${{inputs.numInput}}"
           echo "inputs.boolInput = ${{inputs.boolInput}}"
+          echo "inputs.withDefault = ${{inputs.withDefault}}"
 
           
 
