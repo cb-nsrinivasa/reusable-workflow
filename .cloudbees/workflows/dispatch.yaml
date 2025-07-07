@@ -20,6 +20,10 @@ on:
       withDefault:
         type: number
         default: 10
+      choiceWithoutOptions:
+        type: choice
+
+        
         
         
 
