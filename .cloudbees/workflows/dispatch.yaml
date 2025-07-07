@@ -37,6 +37,7 @@ jobs:
           echo "inputs.numInput = ${{inputs.numInput}}"
           echo "inputs.boolInput = ${{inputs.boolInput}}"
           echo "inputs.withDefault = ${{inputs.withDefault}}"
+          echo "inputs.requiredInput = ${{inputs.requiredInput}}"
 
           
 
