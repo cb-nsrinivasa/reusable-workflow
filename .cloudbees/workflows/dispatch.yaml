@@ -20,10 +20,9 @@ on:
       withDefault:
         type: number
         default: 10
-      choiceWithoutOptions:
-        type: choice
-        options:
-                
+      requiredInput:
+        required: true
+        type: number                
         
 
 jobs:
