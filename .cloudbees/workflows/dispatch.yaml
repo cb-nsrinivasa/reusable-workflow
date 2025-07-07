@@ -22,9 +22,8 @@ on:
         default: 10
       choiceWithoutOptions:
         type: choice
-
-        
-        
+        options:
+                
         
 
 jobs:
