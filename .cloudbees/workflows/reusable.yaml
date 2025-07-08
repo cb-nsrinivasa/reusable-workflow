@@ -5,27 +5,25 @@ name: reusable wf 1
 on:
   workflow_call:
     inputs:
-      targetenv:
-        type: string
-      numTargetEnv:
-        type: number
-      boolTargetEnv:
-        type: boolean
-      choice_boolean:
+      choiceInput:
         type: choice
         options:
           - info
           - warning
           - debug
+      stringInput:
+        type: string
+      numInput:
+        type: number
+      boolInput:
+        type: boolean 
       withDefault:
         type: number
         default: 10
+      requiredInput:
+        required: true
+        type: number 
           
-        
-        
-      defaultTargetenv:
-        type: string
-        default: 'default env'
 jobs:
   JobName1:
     steps:
@@ -33,12 +31,12 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "inputs.targetenv = ${{inputs.targetenv}}"
-          echo "inputs.defaultTargetenv = ${{inputs.defaultTargetenv}}"
-          echo "inputs.numTargetEnv = ${{inputs.numTargetEnv}}"
-          echo "inputs.boolTargetEnv = ${{inputs.boolTargetEnv}}"
-          echo "inputs.choice_boolean = ${{inputs.choice_boolean}}"
-          echo "inputs.choice_boolean = ${{inputs.withDefault}}"
+          echo "inputs.choiceInput = ${{inputs.choiceInput}}"
+          echo "inputs.stringInput = ${{inputs.stringInput}}"
+          echo "inputs.numInput = ${{inputs.numInput}}"
+          echo "inputs.boolInput = ${{inputs.boolInput}}"
+          echo "inputs.withDefault = ${{inputs.withDefault}}"
+          echo "inputs.requiredInput = ${{inputs.requiredInput}}"
           
       - name: Say hello
         uses: docker://golang:1.20.3-alpine3.17
