@@ -9,3 +9,6 @@ on:
 jobs:
   call_rw_1:
     uses: cb-nsrinivasa/reusable-workflow/.cloudbees/workflows/reusable.yaml
+    with:
+      numTargetEnv: 20
+    
