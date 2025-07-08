@@ -17,7 +17,7 @@ on:
           - info
           - warning
           - debug
-      withoutType:
+      withDefault:
         type: number
         default: 10
           
@@ -38,6 +38,7 @@ jobs:
           echo "inputs.numTargetEnv = ${{inputs.numTargetEnv}}"
           echo "inputs.boolTargetEnv = ${{inputs.boolTargetEnv}}"
           echo "inputs.choice_boolean = ${{inputs.choice_boolean}}"
+          echo "inputs.choice_boolean = ${{inputs.withDefault}}"
           
       - name: Say hello
         uses: docker://golang:1.20.3-alpine3.17
