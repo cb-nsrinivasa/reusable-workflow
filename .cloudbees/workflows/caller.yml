@@ -6,9 +6,14 @@ on:
     branches:
       - "**"
   workflow_dispatch:
+    inputs:
+      requiredInput:
+        type: number
+        required: true
+  
 jobs:
   call_rw_1:
     uses: cb-nsrinivasa/reusable-workflow/.cloudbees/workflows/reusable.yaml
     with:
-      requiredInput: 2033
+      requiredInput: ${{ inputs.requiredInput }}
     
