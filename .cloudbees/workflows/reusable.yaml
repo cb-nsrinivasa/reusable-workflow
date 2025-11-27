@@ -45,12 +45,12 @@ jobs:
           echo -n "hello" | cloudbees mask
           echo "hello world "
 
-      - name: print env
-        uses: docker://golang:1.20.3-alpine3.17
-        shell: sh
-        run: |
-          echo ${{vars.key}}
-          echo "hello world "   
+      # - name: print env
+      #   uses: docker://golang:1.20.3-alpine3.17
+      #   shell: sh
+      #   run: |
+      #     echo ${{vars.key}}
+      #     echo "hello world "   
 
       - name: Say hello again
         uses: docker://golang:1.20.3-alpine3.17
